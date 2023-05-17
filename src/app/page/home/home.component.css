@@ -1,0 +1,80 @@
+.menu__container{
+
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    
+
+    
+}
+
+.titulo{
+    margin-top: 60px;
+    border-radius: 60px 0px 0px opx;
+    font-size: 60px;
+    font-weight:bold ;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    padding: 10px;
+    background: rgb(0,0,0);
+    background: linear-gradient(207deg, rgba(0,0,0,0.8015581232492998) 19%, rgba(174,209,238,1) 100%);
+    border-radius: 6px 6px 0px 0px;
+
+}
+
+.menu-img{
+    width: 100%;
+    background-image: url("../../../assets/img/predio.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom-right-radius:  6px ;
+
+   }
+
+.menu-login{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    background: rgb(174,209,238);
+    background: linear-gradient(207deg, rgba(174,209,238,1) 44%, rgba(0,0,0,1) 100%);
+    border-bottom-left-radius:  6px ;
+}
+
+.menu-formulario{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;
+    
+    
+}
+.menu-formulario > input{
+    width: 300px;
+    height:  30px;
+    margin: 5px;
+    padding: 5px;
+    outline: 0;
+    
+
+}
+
+.menu-formulario > button {
+    background-color: #a2b0e9;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Segoe UI;
+
+}
+
+.menu-formulario > button:hover {
+    cursor: pointer;
+    transition: 1s;
+    background-color: rgb(81,166,81);
+
+}
+

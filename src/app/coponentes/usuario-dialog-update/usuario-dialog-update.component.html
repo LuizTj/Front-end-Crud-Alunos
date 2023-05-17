@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Atualizar Dados</h1>
+<div mat-dialog-content>
+
+  <div class="dialog-container">
+    <div class="dialog-campos"><mat-icon>credit_card</mat-icon><input [(ngModel)]="cpf" type="text" value="{{data.cpf}}" readonly></div>
+    <div class="dialog-campos"> <mat-icon>person_outline</mat-icon><input [(ngModel)]="nome" type="text" value="{{data.nome}}"></div>
+    <div class="dialog-campos"><mat-icon>smartphone</mat-icon><input [(ngModel)]="contato" type="text" value="{{data.contato}}"></div>
+    <div class="dialog-campos"><mat-icon> map</mat-icon><input [(ngModel)]="cep" type="text" value="{{data.cep}}"></div>
+
+  </div>
+
+</div>
+<div class="dialog-action" mat-dialog-actions>
+
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="atualizar()"> Editar</button>
+</div>

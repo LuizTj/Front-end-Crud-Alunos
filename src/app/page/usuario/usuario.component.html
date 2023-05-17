@@ -1,0 +1,76 @@
+<div class="cabecalho-container">
+    
+    <div class="cabecalho-texto">
+        <p>CRUD: Create-Read-Update-Detete </p>
+    </div>
+    
+  
+</div>
+<section>
+    <div class="menu-container">
+        <button mat-raised-button  (click) = "mudarDisplay()">CRIAR</button>
+        <input class="formulario-input" [(ngModel)] ="buscarPorNome" type="text" placeholder=" buscar por  nome">
+    
+        
+    </div>
+
+    <div [ngStyle] = "{'display' : display }" class="cadastro-container" >
+     <!--Usuario .Componet :  display2 = true;-->
+        <!--[ngStyle]="{'height': display2 ? '0px' : '300px', 'transition': 'height 0.8s ease'}"
+     button (click)=" display2 = !display2
+  -->   
+        <div class="cadastro-formulario">
+        
+              <div class="formulario-input"><span>Nome:</span><input [(ngModel)]="nome" type="text" required placeholder="Nome"></div>  
+              <div class="formulario-input"><span>CPF:</span><input [(ngModel)]="cpf" type="text" required placeholder="000.000.000-00"></div>  
+              <div class="formulario-input"><span>Contato:</span><input [(ngModel)]="contato" type="tel" required placeholder="xx-xxxxx-xxxx"></div>  
+              <div class="formulario-input"><span>CEP:</span><input [(ngModel)]="cep" type="text" required placeholder="00.000-00"></div>  
+              <div ><button mat-raised-button (click)="cadastrar()">Salvar</button></div> 
+          
+        </div>  
+
+    </div>
+
+   
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Contato</th>
+                <th>CEP</th>
+                <th>Logradouro</th>
+                <th>Bairro</th>
+                <th>localidade</th>
+                <th>UF</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+            </tr>
+            <tr  *ngFor="let alunos of alunosData">
+                <td >{{alunos.id}}</td>
+                <td>{{alunos.nome}}</td>
+                <td>{{alunos.cpf ? alunos.cpf : "N/I"}}</td>
+                <td>{{alunos.contato}}</td>
+                <td>{{alunos.endereco.cep}}</td>
+                <td>{{alunos.endereco.logradouro}}</td>
+                <td>{{alunos.endereco.bairro}}</td>
+                <td>{{alunos.endereco.localidade}}</td>
+                <td>{{alunos.endereco.uf}}</td>
+                <td>
+                    <button (click)="update(alunos)" mat-icon-button class="button-icon-edit" matTooltip="Editar">
+                    <mat-icon class="btn-edit">edit</mat-icon>
+                    </button>
+                </td>
+                <td>
+                    <button (click)="deletar(alunos)" mat-icon-button class="button-icon-delete" matTooltip="Excluir">
+                    <mat-icon class="btn-delete" >delete_forever</mat-icon>
+                </button>
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+</section>
+
+

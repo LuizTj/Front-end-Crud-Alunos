@@ -1,0 +1,19 @@
+.dialog-campos{
+    display:flex;
+    align-items: stretch;
+    margin: 9px;
+}
+
+.dialog-action{
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+   width: 200px;
+   height: 22 px;
+   border-radius: 4px;
+}
+h1{
+    text-align: center;
+}

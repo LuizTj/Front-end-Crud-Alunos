@@ -1,0 +1,16 @@
+.dialog-container{
+    display: flex;
+    justify-content: space-between;
+    /*flex-wrap: ;*/
+}
+
+.dialog-campos{
+    margin: 5px;
+    display:flex;
+    flex-direction: row;
+    text-align:flex-end;
+}
+
+h1{
+    text-align: center;
+}

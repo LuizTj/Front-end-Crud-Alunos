@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Deletar Usuário</h1>
+<div mat-dialog-content>
+    
+  <h4>Você tem cetreza que realmente deseja Excluir?</h4>
+
+  <div class="dialog-container">
+    <div class="dialog-campos"> <mat-icon>person_outline</mat-icon> <span>{{data.nome}}</span></div>
+    <div class="dialog-campos"><mat-icon>credit_card</mat-icon><span>{{data.cpf}}</span></div>
+    <div class="dialog-campos"><mat-icon>smartphone</mat-icon><span>{{data.contato}}</span></div>
+    <div class="dialog-campos"><mat-icon> map</mat-icon><span>{{data.cep}}</span></div>
+
+
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="delete(data.cpf)">Excluir</button>
+</div>
